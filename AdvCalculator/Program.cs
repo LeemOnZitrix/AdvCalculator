@@ -1,46 +1,46 @@
 ﻿using AdvCalculator;
 
-int number1;
-int number2;
 Menu Menu = new Menu();
+
 
 Menu.MainMenu();
 int operation = Convert.ToInt32(Console.ReadLine());
+
 if (operation == 1)
 {
     Console.WriteLine("Wybierz na klawiaturze pierwszą liczbę");
-    number1 = Convert.ToInt32(Console.ReadLine());
+    int number1 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wybierz na klawiaturze drugą liczbę");
-    number2 = Convert.ToInt32(Console.ReadLine());
+    int number2 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wynik to");
-    Console.WriteLine(number1 + number2);
+    Console.WriteLine(Calc.Add(number1, number2));
 }
 else if (operation == 2)
 {
     Console.WriteLine("Wybierz na klawiaturze pierwszą liczbę");
-    number1 = Convert.ToInt32(Console.ReadLine());
+    int number1 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wybierz na klawiaturze drugą liczbę");
-    number2 = Convert.ToInt32(Console.ReadLine());
+    int number2 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wynik to");
-    Console.WriteLine(number1 - number2);
+    Console.WriteLine(Calc.Subtract(number1, number2));
 }
 else if (operation == 3)
 {
     Console.WriteLine("Wybierz na klawiaturze pierwszą liczbę");
-    number1 = Convert.ToInt32(Console.ReadLine());
+    int number1 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wybierz na klawiaturze drugą liczbę");
-    number2 = Convert.ToInt32(Console.ReadLine());
+    int number2 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wynik to");
-    Console.WriteLine(number1 * number2);
+    Console.WriteLine(Calc.Multiply(number1, number2));
 }
 else if (operation == 4)
 {
     Console.WriteLine("Wybierz na klawiaturze pierwszą liczbę");
-    number1 = Convert.ToInt32(Console.ReadLine());
+    int number1 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wybierz na klawiaturze drugą liczbę");
-    number2 = Convert.ToInt32(Console.ReadLine());
+    int number2 = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Wynik to to");
-    Console.WriteLine(number1 / number2);
+    Console.WriteLine(Calc.Divide(number1, number2));
 }
 else if (operation == 5)
 {
