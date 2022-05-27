@@ -1,28 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdvCalculator
+﻿namespace AdvCalculator
 {
-    public class Calc
+    public class Calculator
     {
-        public static int Add(int number1, int number2)
+        public int Add(int number1, int number2) => number1 + number2;
+        public int Subtract(int number1, int number2) => number1 - number2;
+        public int Multiply(int number1, int number2) => number1 * number2;
+        public int Divide(int number1, int number2) => number1 / number2;
+        public int Factorial(int number1, int number2)
         {
-             return number1 + number2;
+            if (number1 == 1)
+            {
+            Console.WriteLine(" 1! = 1");
+            }
+        else
+        {
+            while (number1 != 1)
+            {
+                number2 = number2 * number1;
+                number1 = number1 - 1;
+            }
+
         }
-        public static int Subtract(int number1, int number2)
-        {
-            return number1 - number2;
-        }
-        public static int Multiply(int number1, int number2)
-        {
-            return number1 * number2;
-        }
-        public static int Divide(int number1, int number2)
-        {
-            return number1 / number2;
+            return number2;
         }
 
     }
