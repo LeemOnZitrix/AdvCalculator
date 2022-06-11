@@ -3,30 +3,29 @@
     public class Menu
     {
         public void MainMenu()
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Witaj w kalkulatorze, wybierz operację");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("1. Operacje Podstawowe");         
-            Console.WriteLine("2. Operacje specjalne");          
+        {            
+            ColorExtension.WriteLineInfo("Witaj w kalkulatorze, wybierz operację");           
+            ColorExtension.WriteLineMenu("1. Operacje Podstawowe");
+            ColorExtension.WriteLineMenu("2. Operacje specjalne");          
         }
         public void BasicMenu()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("1. Dodawanie");
-            Console.WriteLine("2. Odejmowanie");
-            Console.WriteLine("3. Mnożenie");
-            Console.WriteLine("4. Dzielenie");
+
+            ColorExtension.WriteLineMenu("1. Dodawanie");
+            ColorExtension.WriteLineMenu("2. Odejmowanie");
+            ColorExtension.WriteLineMenu("3. Mnożenie");
+            ColorExtension.WriteLineMenu("4. Dzielenie");
         }
         public void AdvancedMenu()
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Witaj w operacjach specjalnych");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("1. Silnia");
-            Console.WriteLine("2. Sprawdzenie liczby pierwszej");
-            Console.WriteLine("3. Potęgowanie");
-            Console.WriteLine("4. Średnia z liczb");
-        }
-    }
-}
+
+            ColorExtension.WriteLineInfo("Witaj w operacjach specjalnych");
+            ColorExtension.WriteLineMenu("1. Silnia");
+            ColorExtension.WriteLineMenu("2. Sprawdzenie liczby pierwszej");
+            ColorExtension.WriteLineMenu("3. Potęgowanie");
+            ColorExtension.WriteLineMenu("4. Średnia z liczb");
+            ColosExtension.WriteLineMenu("5. Wartośc Minimalna i Maksymalna");
+        }  
+    }      
+}          
+           

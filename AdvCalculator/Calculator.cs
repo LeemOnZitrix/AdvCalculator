@@ -25,39 +25,70 @@
             }
             return number2;
         }
-        public int PrimeCheck(int number1)
+        public bool PrimeCheck(int number1)
         {
-            int number2, isprime;
+            int number2; bool isprime = true;
             number2 = number1 / 2;
             for (int i = 2; i < number2; i++)
             {
                 if (number1 % i == 0)
                 {
-                    return 1;
+                    isprime = true;
+                    return isprime;
                 }
                 if (number1 % i != 0)
                 {
-                    return 2;
+                    isprime = false;
+                    return isprime;
+
                 }
                 
             }
-            return 0;     
+            return isprime;     
         }
         public int Power(int number1)
         {
             number1 *= number1;
             return number1;
         }
-        public int Arrayaverage(params int[] number1)
+        public double Arrayaverage(double numberscount, double[] number1)
         {
-            int average = 0;
+            double average = 0;
+          
 
             for (int i = 0; i < number1.Length; i++)
             {
                 average += number1[i];
             }
+            average /= numberscount;
 
             return average;
+        }
+
+        public int findMin(int[] arrayminmax)
+        {           
+            int min = int.MaxValue;
+            foreach (var i in arrayminmax)
+            {
+                if (i < min)
+                {
+                    min = i;
+                }
+            }
+            return min;
+        }
+
+        public int findMax(int[] arrayminmax)
+        {
+            int max = int.MinValue;
+            foreach (var i in arrayminmax)
+            {
+                if (i > max)
+                {
+                    max = i;
+                }
+            }
+            return max;
         }
 
     }
