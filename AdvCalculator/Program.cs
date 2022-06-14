@@ -4,25 +4,21 @@ Menu menu = new Menu();
 Calculator calculator = new Calculator();
 MathCalculator mathCalculator = new MathCalculator();  
 
-int BasicOperationSelection = 0; int AdvancedOperationSelection = 0;
-int number1 = 0; int number2 = 0;
 
 menu.ShowMainMenu();
-int MenuSelection = Convert.ToInt32(Console.ReadLine());
-switch (MenuSelection)
+int menuSelection = Convert.ToInt32(Console.ReadLine());
+switch (menuSelection)
 {
     case 1:
         {
             menu.ShowBasicMenu();
-            BasicOperationSelection = Convert.ToInt32(Console.ReadLine());
+            int basicOperationSelection = Convert.ToInt32(Console.ReadLine());
             ColorExtension.WriteLineInfo("Podaj Liczby na których chcesz wykonać operację");
-            number1 = Convert.ToInt32(Console.ReadLine());
-            number2 = Convert.ToInt32(Console.ReadLine());
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int number2 = Convert.ToInt32(Console.ReadLine());
 
-            switch (BasicOperationSelection)
+            switch (basicOperationSelection)
             {
-
-
                 case 1:
                     {
                         ColorExtension.WriteLineInfo("Wynik to");
@@ -51,29 +47,26 @@ switch (MenuSelection)
                     }
             }
             break;
-
         }
-
-
     case 2:
         {
             menu.ShowAdvancedMenu();
-            AdvancedOperationSelection = Convert.ToInt32(Console.ReadLine());
-            switch (AdvancedOperationSelection)
+            int advancedOperationSelection = Convert.ToInt32(Console.ReadLine());
+            switch (advancedOperationSelection)
             {
                 case 1:
                     {
                         ColorExtension.WriteLineInfo("Podaj liczbę (różną od zera) z której obliczę silnie");
-                        number1 = Convert.ToInt32(Console.ReadLine());
-                        ColorExtension.WriteLineResult(number1 + "! = " + mathCalculator.GetFactorial(number1));
+                        int factorial = Convert.ToInt32(Console.ReadLine());
+                        ColorExtension.WriteLineResult(factorial + "! = " + mathCalculator.GetFactorial(factorial));
                         break;
 
                     }
                 case 2:
                     {
                         ColorExtension.WriteLineInfo("Podaj liczbę a ja sprawdzę czy jest pierwsza");
-                        number1 = Convert.ToInt32(Console.ReadLine());
-                        bool isPrime = mathCalculator.GetPrimeCheck(number1);
+                        int prime = Convert.ToInt32(Console.ReadLine());
+                        bool isPrime = mathCalculator.GetPrimeCheck(prime);
                         if (isPrime)
                         {
                             ColorExtension.WriteLineResult("Liczba nie jest pierwsza");
@@ -86,24 +79,23 @@ switch (MenuSelection)
                     }
                 case 3:
                     {
-                        ColorExtension.WriteLineInfo("Podaj liczbę a ja ją spotęguje");
-                        number1 = Convert.ToInt32(Console.ReadLine());
-                        ColorExtension.WriteLineResult(mathCalculator.GetPower(number1, number2));
+                        ColorExtension.WriteLineInfo("Podaj liczbę, oraz do której potęgi chcesz ją spotęgować");
+                        int basis = Convert.ToInt32(Console.ReadLine());
+                        int exponent = Convert.ToInt32(Console.ReadLine());
+                        ColorExtension.WriteLineResult(mathCalculator.GetPower(basis, exponent));
                         break;
                     }
-
                 case 4:
                     {
                         ColorExtension.WriteLineInfo("Podaj ilość liczb a następnie liczby z których oblicze średnią");
-                        int numberscount = Convert.ToInt32(Console.ReadLine());
-                        double[] averagearray = new double[numberscount];
-                        for (int i = 0; i < averagearray.Length; i++)
+                        int numbersCount = Convert.ToInt32(Console.ReadLine());
+                        double[] averageArray = new double[numbersCount];
+                        for (int i = 0; i < averageArray.Length; i++)
                         {
-                            averagearray[i] = Convert.ToDouble(Console.ReadLine());
+                            averageArray[i] = Convert.ToDouble(Console.ReadLine());
                         }
-                        ColorExtension.WriteLineResult(mathCalculator.GetArrayAverage(averagearray));
+                        ColorExtension.WriteLineResult(mathCalculator.GetArrayAverage(averageArray));
                         break;
-
                     }
                 case 5:
                     {
@@ -122,6 +114,5 @@ switch (MenuSelection)
                     }
             }
             break;
-
         }
 }
