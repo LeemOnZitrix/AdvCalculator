@@ -112,6 +112,29 @@ switch (menuSelection)
                         ColorExtension.WriteLineResult(mathCalculator.GetMaxNumber(array));
                         break;
                     }
+                case 6:
+                    {
+                        ColorExtension.WriteLineInfo("odczyt plików txt, podaj ścieżke pliku");
+                        string text = System.IO.File.ReadAllText(Console.ReadLine());
+                        System.Console.WriteLine("Zawartość pliku tekstowego = {0}", text);
+                        break;
+                    }
+                case 7:
+                    {
+                        ColorExtension.WriteLineInfo("zapis zawartości do nowego pliku txt");
+                        ColorExtension.WriteLineInfo("Podaj ścieżke zapisu pliku razem z nazwą");
+                        string path = Console.ReadLine();
+                        ColorExtension.WriteLineInfo("Podaj ilość linijek pliku txt");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        ColorExtension.WriteLineInfo("Podaj zawartość pliku txt");
+                        List<string> content = new List<string>();
+                        for (int i = 0; i < amount; ++i)
+                        {                          
+                            content.Add(Console.ReadLine());
+                        }
+                        File.WriteAllLines(path, content);
+                        break;
+                    }
             }
             break;
         }

@@ -25,6 +25,8 @@
             ColorExtension.WriteLineMenu("3. Potęgowanie");
             ColorExtension.WriteLineMenu("4. Średnia z liczb");
             ColorExtension.WriteLineMenu("5. Wartośc Minimalna i Maksymalna");
+            ColorExtension.WriteLineMenu("6. Odczyt pliku TXT");
+            ColorExtension.WriteLineMenu("7. Zapis do pliku txt");
         }  
     }      
 }          
