@@ -115,8 +115,8 @@ switch (menuSelection)
                 case 6:
                     {
                         ColorExtension.WriteLineInfo("odczyt plików txt, podaj ścieżke pliku");
-                        string text = System.IO.File.ReadAllText(Console.ReadLine());
-                        System.Console.WriteLine("Zawartość pliku tekstowego = {0}", text);
+                        string text = File.ReadAllText(Console.ReadLine());
+                        Console.WriteLine("Zawartość pliku tekstowego = {0}", text);
                         break;
                     }
                 case 7:
