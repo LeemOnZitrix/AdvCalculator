@@ -26,7 +26,8 @@
             ColorExtension.WriteLineMenu("4. Średnia z liczb");
             ColorExtension.WriteLineMenu("5. Wartośc Minimalna i Maksymalna");
             ColorExtension.WriteLineMenu("6. Odczyt pliku TXT");
-            ColorExtension.WriteLineMenu("7. Zapis do pliku txt");
+            ColorExtension.WriteLineMenu("7. Odczyt konkretnej lini z pliku txt");
+            ColorExtension.WriteLineMenu("8. Zapis do pliku txt");
         }  
     }      
 }          
