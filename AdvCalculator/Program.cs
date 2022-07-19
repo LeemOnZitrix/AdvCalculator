@@ -121,6 +121,14 @@ switch (menuSelection)
                     }
                 case 7:
                     {
+                        ColorExtension.WriteLineInfo("odczyt lini z pliku txt");
+                        ColorExtension.WriteLineInfo("podaj ścieżke pliku, a nastepnie numer lini");                       
+                        string line = File.ReadLines(Console.ReadLine()).Skip(Convert.ToInt32(Console.ReadLine())-1).Take(1).First();
+                        Console.WriteLine(line);
+                        break;
+                    }
+                case 8:
+                    {
                         ColorExtension.WriteLineInfo("zapis zawartości do nowego pliku txt");
                         ColorExtension.WriteLineInfo("Podaj ścieżke zapisu pliku razem z nazwą");
                         string path = Console.ReadLine();
