@@ -122,9 +122,10 @@ switch (menuSelection)
                 case 7:
                     {
                         ColorExtension.WriteLineInfo("odczyt lini z pliku txt");
-                        ColorExtension.WriteLineInfo("podaj ścieżke pliku, a nastepnie numer lini");                       
-                        string line = File.ReadLines(Console.ReadLine()).Skip(Convert.ToInt32(Console.ReadLine())-1).Take(1).First();
-                        Console.WriteLine(line);
+                        ColorExtension.WriteLineInfo("podaj ścieżke pliku, a nastepnie numer lini");
+                        string[] lines = File.ReadAllLines(Console.ReadLine());
+                        int linenumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(lines[linenumber-1]);
                         break;
                     }
                 case 8:
